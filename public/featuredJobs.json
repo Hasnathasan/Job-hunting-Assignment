@@ -3,7 +3,7 @@
         "id": 1,
         "jobTitle": "Technical Database Engineer",
         "company": "Google LLC",
-        "companyPhoto": "../src/assets/All Images/google-1-1 1.png",
+        "companyPhoto": "/../src/assets/All Images/google-1-1 1.png",
         "jobtype": "remote",
         "place": "Dhaka, Bangladesh",
         "salary": "100K-150K",

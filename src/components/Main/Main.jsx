@@ -25,11 +25,14 @@ const Main = () => {
                     }
                 </div>
             </div>
-            <div>
-                {
-                    fourJobs.map(job => <FeaturedJob key={job.id} job={job}></FeaturedJob>)
-                }
+            <div className="container mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {
+                        fourJobs.map(job => <FeaturedJob key={job.id} job={job}></FeaturedJob>)
+                    }
+                </div>
             </div>
+            
             
         </div>
     );
