@@ -1,5 +1,5 @@
 import React from 'react';
-import manPic from '../../assets/All Images/P3OLGJ1 copy 1.png'
+import manPic from '../../../public/All Images/P3OLGJ1 copy 1.png'
 
 const HomeTitle = () => {
     return (

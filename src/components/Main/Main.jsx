@@ -28,13 +28,13 @@ const Main = () => {
             <HomeTitle></HomeTitle>
             <div className="my-32 container mx-auto">
                 
-                <div className="grid grid-cols-1 p-4 md:p-0 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7">
+                <div className="grid grid-cols-2 p-4 md:p-0 md:grid-cols-3 lg:grid-cols-4 gap-7">
                     {
                         jobCategory.map(job => <JobList key={job.id} job={job}></JobList>)
                     }
                 </div>
             </div>
-            <div className="container mx-auto my-10">
+            <div className="container mx-auto p-4 md:p-0 my-10">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {
                         featuredJobs.map(job => <FeaturedJob key={job.id} job={job}></FeaturedJob>)

@@ -1,6 +1,6 @@
 import React from 'react';
-import locationLogo from '../../assets/Icons/Frame-4.png'
-import moneyLogo from '../../assets/Icons/Frame.png'
+import locationLogo from '../../../public/Icons/Frame-4.png'
+import moneyLogo from '../../../public/Icons/Frame.png'
 
 const FeaturedJob = ({job}) => {
     const {jobTitle, company, companyPhoto, jobtype, address, salary} = job;
