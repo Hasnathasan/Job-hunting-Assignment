@@ -4,7 +4,7 @@ import JobList from '../Job-List/JobList';
 import { useLoaderData } from 'react-router-dom';
 import FeaturedJob from '../Feature-Job/FeaturedJob';
 
-let jobQuantity = 4;
+
 const Main = () => {
     const [featuredJobs, setFeaturedJobs] = useState([])
     const jobs = useLoaderData();
@@ -12,19 +12,20 @@ const Main = () => {
         setFeaturedJobs(jobs)
     }
     useEffect(() => {
-        const Jobs = jobs.filter(job => job.id <= jobQuantity);
+        const Jobs = jobs.slice(0, 4);
         setFeaturedJobs(Jobs);
     },[])
-    
-
+   
     const [jobCategory, setJobCategory] = useState([])
     useEffect( () => {
         fetch('jobCategory.json')
             .then(res => res.json())
             .then(data => setJobCategory(data))
     },[]);
+
+    
     return (
-        <div className="">
+            <div className="">
             <HomeTitle></HomeTitle>
             <div className="my-32 container mx-auto">
                 
@@ -41,12 +42,11 @@ const Main = () => {
                     }
                 </div>
                 <div className="text-center">
-                    <button onClick={showAll} className={featuredJobs.length === 6 ? "hidden" : "btn border-none text-white mt-5"}>Show More</button>
+                    <button onClick={showAll} className={featuredJobs.length === 6 ? "hidden" : "btn border-none text-lg capitalize  text-white mt-5"}>See All Jobs</button>
                 </div>
             </div>
-            
-            
         </div>
+        
     );
 };
 
