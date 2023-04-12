@@ -33,8 +33,8 @@ const ApplliedJobs = () => {
       <div className="bg-violet-50 py-10">
         <h2 className="text-3xl text-center font-bold">Applied Jobs</h2>
       </div>
-      <div>
-      <select className="select w-28" onChange={filterByValue}>
+      <div className="container mx-auto mt-3 text-right">
+      <select className="select border border-slate-500 w-28" onChange={filterByValue}>
         <option disabled selected>Filter by</option>
         <option value="remote">Remote</option>
         <option value="onsite">Onsite</option>
