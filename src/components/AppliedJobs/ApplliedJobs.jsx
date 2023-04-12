@@ -7,30 +7,26 @@ const ApplliedJobs = () => {
     const [appliedJobs, setAppliedJobs] = useState([])
     const featuredJobs = useLoaderData();
     const localJobsId = getfeaturedJob();
-    const selectedJobs = [];
     useEffect( () => {
-        if(localJobsId){
+        const selectedJobs = [];
             for(const id in localJobsId){
-                const allreadyAdded = appliedJobs.find(job => job.id == id)
-                console.log(allreadyAdded);
-                if(!allreadyAdded){
                     const job = featuredJobs.find(job => job.id == id);
                     selectedJobs.push(job)
-                }
+             
         }
-
-        }
-    setAppliedJobs(selectedJobs);
+        setAppliedJobs(selectedJobs);
     },[])
     
-    // console.log(appliedJobs);
     return (
         <div>
-            <div className="bg-violet-50 py-10"></div>
-            <h2 className="text-3xl text-center font-bold">Applied Jobs</h2>
-            {
-                appliedJobs.map(job => <RenderJob key={job.id} job={job}></RenderJob>)
-            }
+            <div className="bg-violet-50 py-10">
+                <h2 className="text-3xl text-center font-bold">Applied Jobs</h2>
+            </div>
+            <div className="container mx-auto px-5 grid grid-cols-1 my-14 gap-10 flex-col items-center justify-center">
+                {
+                    appliedJobs.map(job => <RenderJob key={job.id} job={job}></RenderJob>)
+                }
+            </div>
         </div>
     );
 };

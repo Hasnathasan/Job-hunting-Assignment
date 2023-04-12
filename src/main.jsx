@@ -8,11 +8,11 @@ import {
 } from "react-router-dom";
 import Layout from './components/Layout/Layout';
 import Main from './components/Main/Main';
-import Statistics from './components/Statistics/Statistics';
+import JobDetails from './components/JobDetails/JobDetails';
 import ApplliedJobs from './components/AppliedJobs/ApplliedJobs';
 import Blog from './components/Blog/Blog';
 import Error from './components/Error/Error';
-import { LoadID } from './components/LoadID/LoadID';
+import Statistics from './components/Statistics/Statistics';
 
 const router = createBrowserRouter([
   {
@@ -26,8 +26,8 @@ const router = createBrowserRouter([
 
       },
       {
-        path: "/statistics/:jobID",
-        element: <Statistics></Statistics>,
+        path: "/jobDetails/:jobID",
+        element: <JobDetails></JobDetails>,
         loader: ({params}) => fetch('/featuredJobs.json')
       },
       {
@@ -43,11 +43,11 @@ const router = createBrowserRouter([
         path: "/blog",
         element: <Blog></Blog>
       },
-      {
-        path: "*",
-        element: <Error></Error>
-      }
     ]
+  },
+  {
+    path: "*",
+    element: <Error></Error>
   }
 ])
 
