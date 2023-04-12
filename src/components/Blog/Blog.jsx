@@ -7,31 +7,53 @@ const Blog = () => {
         <h2 className="text-3xl text-center font-bold">Blog Section</h2>
       </div>
       <div className="my-8 p-4 sm:p-8 rounded">
-            <h2 className="text-2xl font-bold mb-2">What is the difference between state and prop in React?</h2>
-            <p className="text-lg font-medium mb-10">Ans: In React, state manage internel data in a component and can be changed by 
-                the component using the setState() method. On the other hand,
-                props are read-only data passed down from a parent component and 
-                cannot be changed by the component.
-            </p>
+        <h2 className="text-2xl font-bold mb-2">
+          When should I use Context API?
+        </h2>
+        <p className="text-lg font-medium mb-10">
+          Ans: The React Context API is used to share data between components
+          that are not directly connected in the component tree. It's useful for
+          scenarios such as theming, user authentication, language selection,
+          and global state. If you find yourself passing props down through
+          multiple levels of components, the Context API can help you avoid prop
+          drilling.
+        </p>
 
-            <h2 className="text-2xl font-bold mb-2">How does useState work?</h2>
-            <p className="text-lg font-medium mb-10">Ans: The useState hook adds state to a functional component in React. It initializes and updates state, 
-                and merges the updated state with the previous state when re-rendering the component.
-            </p>
-            
-            <h2 className="text-2xl font-bold mb-2">What is the Purpose of useEffect other than fetching data?</h2>
-            <p className="text-lg font-medium mb-10">Ans: It can be used to update the document title, add and remove event listeners, set up subscriptions, 
-                and perform cleanup operations. Essentially, useEffect allows you to perform side effects in your 
-                components, such as interacting with the browser DOM, in a declarative way.
-            </p>
+        <h2 className="text-2xl font-bold mb-2">
+          What is custom hook in react?
+        </h2>
+        <p className="text-lg font-medium mb-10">
+          Ans: In React, a custom hook is a function that allows you to reuse
+          stateful logic across multiple components. It's a way to extract
+          stateful logic from a component so it can be used in other components
+          without duplicating code. Custom hooks use the same hooks as regular
+          components, such as useState and useEffect, but can be shared and
+          reused like regular functions.
+        </p>
 
-            <h2 className="text-2xl font-bold mb-2">How Does React work?</h2>
-            <p className="text-lg font-medium mb-10">React is a JavaScript library that helps build user interfaces. It works by creating a 
-                "virtual" version of the web page, making updates to it when necessary, and then 
-                updating the actual web page. React uses a declarative approach to building UI components, 
-                which makes them easier to maintain and scale.
-            </p>
-        </div>
+        <h2 className="text-2xl font-bold mb-2">What is useRef in react?</h2>
+        <p className="text-lg font-medium mb-10">
+          Ans: In React, useRef is a hook that returns a mutable ref object that
+          persists throughout the component's lifecycle. The ref object can be
+          used to reference a DOM element or a value, and can be updated without
+          triggering a re-render of the component. This is useful for managing
+          focus, measuring elements, or accessing values in event handlers. The
+          ref can also be used to share mutable data between components or
+          across renders of a single component.
+        </p>
+
+        <h2 className="text-2xl font-bold mb-2">What is useMemo in react?</h2>
+        <p className="text-lg font-medium mb-10">
+          Ans: In React, useMemo is a hook that can help optimize performance by
+          memoizing the result of a function. It takes a function and a
+          dependency array and returns a memoized value. The function is only
+          re-executed when one of the dependencies in the array changes,
+          otherwise the memoized value is returned. This can be useful for
+          expensive calculations or rendering large lists. By memoizing the
+          result, unnecessary re-renders can be avoided and the overall
+          performance of the application can be improved.
+        </p>
+      </div>
     </div>
   );
 };
